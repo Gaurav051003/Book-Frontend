@@ -8,7 +8,7 @@ function Course() {
     const getBook = async () => {
       try {
         const res = await axios.get("https://books-backend-mzmk.onrender.com/book");
-        console.log(res.data);
+        // console.log(res.data);
         setBook(res.data);
       } catch (error) {
         console.log(error);
