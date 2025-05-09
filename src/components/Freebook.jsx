@@ -12,10 +12,10 @@ function Freebook() {
   useEffect(() => {
     const getBook = async () => {
       try {
-        const res = await axios.get("https://books-backend-mzmk.onrender.com/book");
+        const res = await axios.get("https://book-backend-jv7d.onrender.com/book");
 
         const data = res.data;
-        console.log(data);
+        // console.log(data);
         setBook(data);
       } catch (error) {
         console.log(error);
@@ -72,8 +72,8 @@ function Freebook() {
 
         <div>
           <Slider {...settings}>
-            {book.map((item) => (
-              <Cards item={item} key={item.id} />
+            {book.slice(0, 5).map((item, index) => (
+              <Cards item={item} key={index} />
             ))}
           </Slider>
         </div>

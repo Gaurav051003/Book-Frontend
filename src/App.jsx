@@ -9,17 +9,6 @@ import { useAuth } from "./context/AuthProvider";
 
 function App() {
   const [authUser, setAuthUser] = useAuth();
-  console.log(authUser);
-
-  // const apiUrl = import.meta.env.VITE_REACT_APP_API_URL;
-
-  useEffect(() => {
-    // ✅ Use it to make an API call
-    fetch(`https://books-backend-mzmk.onrender.com/api/book`)
-      .then((res) => res.json())
-      .then((data) => setBooks(data))
-      .catch((err) => console.error('Error fetching books:', err));
-  }, []);
 
   return (
     <>
@@ -27,7 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route
-            path="/book"
+            path="/course"
             element={authUser ? <Courses /> : <Navigate to="/signup" />}
           />
           <Route path="/signup" element={<Signup />} />
