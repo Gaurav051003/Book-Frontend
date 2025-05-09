@@ -15,7 +15,7 @@ function App() {
 
   useEffect(() => {
     // ✅ Use it to make an API call
-    fetch(`https://books-backend-mzmk.onrender.com/api/books`)
+    fetch(`https://books-backend-mzmk.onrender.com/api/book`)
       .then((res) => res.json())
       .then((data) => setBooks(data))
       .catch((err) => console.error('Error fetching books:', err));
