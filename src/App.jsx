@@ -6,6 +6,8 @@ import Navbar from "./components/Navbar";
 import { Toaster } from "react-hot-toast";
 import { useAuth } from "./context/AuthProvider";
 import Courses from "./courses/Courses";
+import About from "./components/About";
+
 
 
 
@@ -20,6 +22,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/book" element={authUser ? <Courses /> : <Navigate to="/signup" />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/about" element={<About />} />
         </Routes>
 
         <Toaster />
