@@ -6,11 +6,11 @@ import { Link } from "react-router-dom";
 function Course() {
   const [book, setBook] = useState([]);
 
-  useEffect(() => {
+ useEffect(() => {
     const getBook = async () => {
       try {
         const res = await axios.get(
-          "https://book-backend-jv7d.onrender.com/book/course"
+          "https://book-backend-jv7d.onrender.com/book/all-books"
         );
         console.log("all books in there: ", res.data);
         setBook(res.data);
@@ -20,6 +20,7 @@ function Course() {
     };
     getBook();
   }, []);
+
 
   return (
     <>
