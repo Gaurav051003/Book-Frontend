@@ -20,10 +20,7 @@ function App() {
         <Navbar /> 
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route
-            path="/book"
-            element={authUser ? <Courses /> : <Navigate to="/signup" />}
-          />
+          <Route path="/book" element={authUser ? <Courses /> : <Navigate to="/signup" />} />
           <Route path="/signup" element={<Signup />} />
         </Routes>
         <Toaster />
