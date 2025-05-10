@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Home from "./home/Home";
 import { Navigate, Route, Routes } from "react-router-dom";
-import Courses from "./courses/Courses";
+import Course from "./courses/Courses";
 import Signup from "./components/Signup";
 import Contact from "./components/Contact"; // ✅ Make sure this exists
 import Navbar from "./components/Navbar";
@@ -20,7 +20,7 @@ function App() {
         <Navbar /> 
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/book" element={authUser ? <Courses /> : <Navigate to="/signup" />} />
+          <Route path="/book" element={authUser ? <Course /> : <Navigate to="/signup" />} />
           <Route path="/signup" element={<Signup />} />
         </Routes>
         <Toaster />
