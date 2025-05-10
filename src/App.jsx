@@ -5,7 +5,7 @@ import Signup from "./components/Signup";
 import { Toaster } from "react-hot-toast";
 import { useAuth } from "./context/AuthProvider";
 import Contact from  "./components/Contact.jsx";
-import AboutUs from  "./components/Aboutus.jsx";
+import AboutUs from  "./components/AboutUs.jsx";
 
 
 function App() {
