@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import Home from "./home/Home";
 import { Navigate, Route, Routes } from "react-router-dom";
-import Courses from "./courses/Courses";
 import Signup from "./components/Signup";
 import { Toaster } from "react-hot-toast";
 import { useAuth } from "./context/AuthProvider";
+import Contact from  "./components/Contact.jsx";
+import AboutUs from  "./components/Aboutus.jsx";
 
 
 function App() {
@@ -17,6 +18,8 @@ function App() {
           <Route path="/" element={<Home />} />
   
           <Route path="/signup" element={<Signup />} />
+          <Route path="/contact" element={<Contact/>} />
+          <Route path="/about" element={<AboutUs/>} />
         </Routes>
         <Toaster />
       </div>
